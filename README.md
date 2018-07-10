@@ -1,4 +1,4 @@
-## HiGlass SV explorer
+## HiGlass CNV explorer
 
 To use simply start an http server in this directory:
 
