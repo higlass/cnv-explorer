@@ -20,13 +20,13 @@
   <div style=" display: flex; height: 100% ">
     <div style="width: 50%">
       <h3>List of CNVs</h3>
-      <div id="sv-list">
+      <div id="sv-list" style="border-right: 1px solid #aaa; margin-right: 10px">
 
       </div>
     </div>
 
     <div 
-        style="width: 50%; height: 100vh"
+        style="width: 50%; height: 100vh; position: fixed; left: 50vw"
                      id="development-demo">
     </div>
   </div>
@@ -40,20 +40,19 @@
 {
   "editable": true,
   "trackSourceServers": [
+    "/api/v1",
     "http://higlass.io/api/v1"
   ],
-  "exportViewUrl": "http://higlass.io/api/v1/viewconfs",
+  "exportViewUrl": "/api/v1/viewconfs",
   "views": [
     {
-      "chromInfoPath": "//s3.amazonaws.com/pkerp/data/hg19/chromSizes.tsv",
-      "uid": "view1",
       "initialXDomain": [
-        1330023197.368114,
-        1970568035.463622
+        926576700.2500085,
+        933476698.7499915
       ],
       "initialYDomain": [
-        1841506758.8480794,
-        2409912566.633802
+        925583285.2873993,
+        934470113.7126007
       ],
       "tracks": {
         "top": [
@@ -62,111 +61,220 @@
             "created": "2017-06-06T17:03:01.273116Z",
             "server": "http://higlass.io/api/v1",
             "tilesetUid": "N12wVGG9SPiTkk03yUayUw",
-            "uid": "d8kUTi64S0-8vsW7Y7YX4w",
+            "uid": "A2aX1mNdTLibPpWgkeyfHA",
             "type": "horizontal-chromosome-labels",
-            "options": {},
-            "width": 515,
+            "options": {
+              "showMousePosition": false,
+              "mousePositionColor": "#999999"
+            },
+            "width": 448,
             "height": 30,
+            "position": "top"
+          },
+          {
+            "type": "bedlike",
+            "uid": "EOSvKEj9S8umnqLw98SkGw",
+            "tilesetUid": "BEsUz92nQWWmXbzzNUlPWg",
+            "server": "http://resgen.io/api/v1",
+            "options": {
+              "fillColor": "blue",
+              "axisPositionHorizontal": "right",
+              "labelColor": "black",
+              "labelPosition": "hidden",
+              "trackBorderWidth": 0,
+              "trackBorderColor": "black",
+              "valueColumn": 4,
+              "name": "8c4ebff2-8318-4046-98f5-da8f6b1a9e3b.consensus.20170119.somatic.cna.annotated.txt.beddb"
+            },
+            "name": "8c4ebff2-8318-4046-98f5-da8f6b1a9e3b.consensus.20170119.somatic.cna.annotated.txt.beddb",
+            "width": 448,
+            "height": 55,
+            "position": "top",
+            "header": "chromosome\tstart\tend\ttotal_cn\tmajor_cn\tminor_cn\tstar\tlevel\tmethods_agree\tabsolute_broad_major_cn\tabsolute_broad_minor_cn\tabsolute_broad_het_error\tabsolute_broad_cov_error\taceseq_copy_number\taceseq_minor_cn\taceseq_major_cn\tbattenberg_nMaj1_A\tbattenberg_nMin1_A\tbattenberg_frac1_A\tbattenberg_nMaj2_A\tbattenberg_nMin2_A\tbattenberg_frac2_A\tbattenberg_SDfrac_A\tbattenberg_SDfrac_A_BS\tbattenberg_frac1_A_0.025\tbattenberg_frac1_A_0.975\tclonehd_copy_number\tclonehd_minor_cn\tclonehd_major_cn\tsclust_nMaj1_A\tsclust_nMin1_A\tsclust_frac1_A\tsclust_nMaj2_A\tsclust_nMin2_A\tsclust_frac2_A\tjabba_copy_number\tjabba_minor_cn\tjabba_major_cn"
+          },
+          {
+            "name": "Gene Annotations (hg19)",
+            "created": "2017-02-05T19:31:52.412319Z",
+            "server": "http://higlass.io/api/v1",
+            "tilesetUid": "OHJakQICQD6gTD7skx4EWA",
+            "uid": "Spy23uSeQVKNXBAU-7VGxw",
+            "type": "horizontal-gene-annotations",
+            "options": {
+              "labelColor": "black",
+              "labelPosition": "hidden",
+              "plusStrandColor": "blue",
+              "minusStrandColor": "red",
+              "trackBorderWidth": 0,
+              "trackBorderColor": "black",
+              "showMousePosition": false,
+              "mousePositionColor": "#999999",
+              "name": "Gene Annotations (hg19)"
+            },
+            "width": 448,
+            "height": 55,
+            "position": "top",
+            "header": ""
+          },
+          {
+            "name": "wgEncodeSydhTfbsGm12878Ctcfsc15914c20StdSig",
+            "created": "2017-02-03T17:46:58.349271Z",
+            "server": "http://higlass.io/api/v1",
+            "tilesetUid": "b6qFe7fOSnaX-YkP2kzN1w",
+            "uid": "XdF5dtorRqivCe5CaGSMqg",
+            "type": "horizontal-bar",
+            "options": {
+              "labelColor": "black",
+              "labelPosition": "topLeft",
+              "axisPositionHorizontal": "right",
+              "lineStrokeColor": "blue",
+              "lineStrokeWidth": 1,
+              "valueScaling": "linear",
+              "trackBorderWidth": 0,
+              "trackBorderColor": "black",
+              "labelTextOpacity": 0.4,
+              "showMousePosition": false,
+              "mousePositionColor": "#999999",
+              "showTooltip": false,
+              "name": "CTCF binding"
+            },
+            "width": 448,
+            "height": 35,
             "position": "top"
           }
         ],
-        "left": [
-          {
-            "name": "Chromosome Axis",
-            "created": "2017-06-06T17:03:01.273116Z",
-            "server": "http://higlass.io/api/v1",
-            "tilesetUid": "N12wVGG9SPiTkk03yUayUw",
-            "uid": "ECU4soplRO-PnCB-RGHTLw",
-            "type": "vertical-chromosome-labels",
-            "options": {},
-            "width": 20,
-            "height": 457,
-            "position": "left"
-          }
-        ],
-        "center": [
-          {
-            "uid": "Ihzcos--SWij8O7wPpjI5A",
-            "type": "combined",
-            "contents": [
-              {
-                "name": "Rao et al. (2014) K562 MboI (allreps) 1kb",
-                "created": "2017-02-03T03:32:35.710182Z",
-                "server": "http://higlass.io/api/v1",
-                "tilesetUid": "QvdMEvccQuOxKTEjrVL3wA",
-                "uid": "V4GTUC_jTGiqp5B5q3VI3g",
-                "type": "heatmap",
-                "options": {
-                  "labelPosition": "bottomRight",
-                  "colorRange": [
-                    "white",
-                    "rgba(245,166,35,1.0)",
-                    "rgba(208,2,27,1.0)",
-                    "black"
-                  ],
-                  "maxZoom": null,
-                  "colorbarPosition": "topRight",
-                  "trackBorderWidth": 0,
-                  "trackBorderColor": "black",
-                  "heatmapValueScaling": "log",
-                  "name": "Rao et al. (2014) K562 MboI (allreps) 1kb",
-                  "scaleStartPercent": "0.00000",
-                  "scaleEndPercent": "1.00000"
-                },
-                "width": 515,
-                "height": 457,
-                "transforms": [
-                  {
-                    "name": "ICE",
-                    "value": "weight"
-                  }
-                ],
-                "position": "center"
-              },
-              
-              {
-                "name": "Chromosome Grid",
-                "created": "2017-06-06T17:03:01.273116Z",
-                "server": "http://higlass.io/api/v1",
-                "tilesetUid": "N12wVGG9SPiTkk03yUayUw",
-                "uid": "bWJ0d3_LSQGgDg67g64SgA",
-                "type": "2d-chromosome-grid",
-                "options": {
-                  "lineStrokeWidth": 1,
-                  "lineStrokeColor": "grey"
-                },
-                "width": 20,
-                "height": 20,
-                "position": "center"
-              }
-            ],
-            "position": "center",
-            "options": {},
-            "width": 515,
-            "height": 457
-          }
-        ],
+        "left": [],
+        "center": [],
         "bottom": [],
         "right": [],
-        "whole": []
+        "whole": [],
+        "gallery": []
       },
       "layout": {
         "w": 12,
-        "h": 7,
+        "h": 6,
         "x": 0,
-        "y": 0,
+        "y": 2,
         "i": "view1",
         "moved": false,
         "static": false
       },
-      "genomePositionSearchBoxVisible": true,
-      "genomePositionSearchBox": {
-        "autocompleteServer": "http://higlass.io/api/v1",
-        "chromInfoServer": "http://higlass.io/api/v1",
-        "visible": true,
-        "chromInfoId": "hg19",
-        "autocompleteId": "OHJakQICQD6gTD7skx4EWA"
-      }
+      "uid": "view1"
+    },
+    {
+      "initialXDomain": [
+        23076923.076922886,
+        2976923076.9230766
+      ],
+      "tracks": {
+        "top": [
+          {
+            "type": "combined",
+            "uid": "Bg5p9qSQT9GqnTTZVfGu1g",
+            "height": 30,
+            "width": 440,
+            "contents": [
+              {
+                "name": "Chromosome Axis",
+                "created": "2017-06-06T17:03:01.273116Z",
+                "server": "http://higlass.io/api/v1",
+                "tilesetUid": "N12wVGG9SPiTkk03yUayUw",
+                "uid": "A2aX1mNdTLibPpWgkeyfHA",
+                "type": "horizontal-chromosome-labels",
+                "options": {
+                  "showMousePosition": false,
+                  "mousePositionColor": "#999999"
+                },
+                "width": 440,
+                "height": 30,
+                "position": "top"
+              },
+              {
+                "uid": "Kc1QiOjdRYiS_dc4o8GHLA",
+                "type": "viewport-projection-horizontal",
+                "fromViewUid": "view1",
+                "options": {
+                  "projectionFillColor": "#777",
+                  "projectionStrokeColor": "#777",
+                  "projectionFillOpacity": 0.3,
+                  "projectionStrokeOpacity": 0.7,
+                  "strokeWidth": 1
+                },
+                "name": "Viewport Projection",
+                "position": "top"
+              }
+            ],
+            "position": "top",
+            "options": {}
+          },
+          {
+            "type": "combined",
+            "uid": "cYr54iJBRr-XTeXUosnujw",
+            "height": 55,
+            "width": 440,
+            "contents": [
+              {
+                "name": "Gene Annotations (hg19)",
+                "created": "2017-02-05T19:31:52.412319Z",
+                "server": "http://higlass.io/api/v1",
+                "tilesetUid": "OHJakQICQD6gTD7skx4EWA",
+                "uid": "Spy23uSeQVKNXBAU-7VGxw",
+                "type": "horizontal-gene-annotations",
+                "options": {
+                  "labelColor": "black",
+                  "labelPosition": "hidden",
+                  "plusStrandColor": "blue",
+                  "minusStrandColor": "red",
+                  "trackBorderWidth": 0,
+                  "trackBorderColor": "black",
+                  "showMousePosition": false,
+                  "mousePositionColor": "#999999",
+                  "name": "Gene Annotations (hg19)"
+                },
+                "width": 440,
+                "height": 55,
+                "position": "top",
+                "header": ""
+              },
+              {
+                "uid": "Tbna8qOZTFyfsbDdOSIiPw",
+                "type": "viewport-projection-horizontal",
+                "fromViewUid": "view1",
+                "options": {
+                  "projectionFillColor": "#777",
+                  "projectionStrokeColor": "#777",
+                  "projectionFillOpacity": 0.3,
+                  "projectionStrokeOpacity": 0.7,
+                  "strokeWidth": 1
+                },
+                "name": "Viewport Projection",
+                "position": "top"
+              }
+            ],
+            "position": "top",
+            "options": {}
+          }
+        ],
+        "left": [],
+        "center": [],
+        "bottom": [],
+        "right": [],
+        "whole": [],
+        "gallery": []
+      },
+      "layout": {
+        "w": 12,
+        "h": 2,
+        "x": 0,
+        "y": 0,
+        "i": "UX2CyVx9S6y_KPXNefKROw",
+        "moved": false,
+        "static": false
+      },
+      "uid": "UX2CyVx9S6y_KPXNefKROw",
+      "initialYDomain": [
+        1068131868.1318682,
+        1931868131.868132
+      ]
     }
   ],
   "zoomLocks": {
@@ -194,28 +302,32 @@
         }
     );
 
-hglib.ChromosomeInfo(testViewConfig.views[0].chromInfoPath, function(chromInfo) {
+hglib.ChromosomeInfo("//s3.amazonaws.com/pkerp/public/b37_chromInfo.txt", function(chromInfo) {
     console.log('chromInfo:', chromInfo);
-  d3.tsv('//s3.amazonaws.com/pkerp/public/cnv-explorer/7eb0f792-858f-45d1-a908-125b02ea1506.consensus.20170119.somatic.cna.annotated.txt', function(error, data)  {
+  d3.tsv('data/8c4ebff2-8318-4046-98f5-da8f6b1a9e3b.consensus.20170119.somatic.cna.annotated.txt', function(error, data)  {
+    data = data.filter(d => d.total_cn < 2 || d.total_cn > 3)
     var divs = d3.select('#sv-list')
       .selectAll('div')
-      .data(data.slice(0,5))
+      .data(data.slice(0,20))
       .enter()
       .append('a')
       .style('cursor', 'pointer')
       .on('click', function(d) {
           console.log('d:', d);
-        var absStart = chromInfo.chrPositions['chr' + d.chromosome].pos + +d.start;
-        var absEnd = chromInfo.chrPositions['chr' + d.chromosome].pos + +d.end;
-        var padding = (absEnd + absStart) / 4
+        var absStart = chromInfo.chrPositions[d.chromosome].pos + +d.start;
+        var absEnd = chromInfo.chrPositions[d.chromosome].pos + +d.end;
+        var padding = (absEnd - absStart) / 4
 
-        console.log('absStart:', absStart);
+        console.log('click absStart:', absStart, absEnd);
 
           console.log('goto');
-        window.hgApi.zoomTo('view1', 
-          absStart - padding, absEnd - padding,
-          absStart - padding, absEnd - padding,
+        window.hgApi.zoomTo(testViewConfig.views[0].uid, 
+          absStart - padding, absEnd + padding,
+          absStart - padding, absEnd + padding,
           1000);
+      })
+      .each(function(d) {
+        console.log('d', d);
       })
       .append('div')
       .style("display", "flex")
@@ -224,8 +336,27 @@ hglib.ChromosomeInfo(testViewConfig.views[0].chromInfoPath, function(chromInfo) 
     var svs = divs
       .append('div')
       .style("width", "200px")
-      .style("display", "flex")
       .style("align-items", "center")
+
+
+
+
+    var deletions = svs.filter(d => d.total_cn < 2)
+      .append('p')
+      .append('b')
+      .text('Deletion')
+
+    var amplifications = svs.filter(d => d.total_cn > 2)
+      .append('p')
+      .append('b')
+      .text(d => `Amplification`)
+
+   var amplifications = svs.filter(d => d.total_cn > 2)
+      .append('p')
+      .text(d => `(total: ${d.total_cn}, major: ${d.major_cn}, minor: ${d.minor_cn})`)
+
+    var chroms = svs.append('p')
+      .append('small')
       .text(function(d) {
         return "chr" + d.chromosome + " " + d.start + " " + d.end + " " + d.total_cn; 
       })
@@ -244,14 +375,21 @@ hglib.ChromosomeInfo(testViewConfig.views[0].chromInfoPath, function(chromInfo) 
           templateJson.hideHeader = true;
           templateJson.editable = false;
           templateJson.zoomFixed = true;
-          templateJson.views[0].tracks.top = [];
-          templateJson.views[0].tracks.left = [];
-          templateJson.views[0].tracks.center[0].contents[0].options.colorbarPosition = 'hidden';
-          templateJson.views[0].tracks.center[0].contents[0].options.labelPosition = 'hidden';
-        var absStart = chromInfo.chrPositions['chr' + d.chromosome].pos + +d.start;
-        var absEnd = chromInfo.chrPositions['chr' + d.chromosome].pos + +d.end;
-          templateJson.views[0].initialXDomain = [absStart, absEnd];
-          templateJson.views[0].initialYDomain = [absStart, absEnd];
+          templateJson.views = templateJson.views.slice(0,1);
+            templateJson.views[0].tracks.top = [
+              testViewConfig.views[0].tracks.top[0],
+              testViewConfig.views[0].tracks.top[1]
+              ];
+            templateJson.views[0].tracks.left = [];
+          //templateJson.views[0].tracks.center[0].contents[0].options.colorbarPosition = 'hidden';
+          //templateJson.views[0].tracks.center[0].contents[0].options.labelPosition = 'hidden';
+        var absStart = chromInfo.chrPositions[d.chromosome].pos + +d.start;
+        var absEnd = chromInfo.chrPositions[d.chromosome].pos + +d.end;
+        var padding = (absEnd - absStart) / 2;
+        console.log('absStart:', absStart, 'absEnd', absEnd)
+
+          templateJson.views[0].initialXDomain = [absStart - padding, absEnd + padding];
+          templateJson.views[0].initialYDomain = [absStart - padding, absEnd + padding];
             hglib.viewer(
                 document.getElementById('cnv-' + i),
              templateJson,
@@ -264,7 +402,7 @@ hglib.ChromosomeInfo(testViewConfig.views[0].chromInfoPath, function(chromInfo) 
       ;
 
       window.hgApi.on('location', function(data) {
-        console.log('data.xDomain:', data.xDomain);
+        // console.log('data.xDomain:', data.xDomain);
 
         const fromX = data.xDomain[0];
         const toX = data.xDomain[1];
@@ -272,8 +410,8 @@ hglib.ChromosomeInfo(testViewConfig.views[0].chromInfoPath, function(chromInfo) 
         svs.style('background', 'transparent');
 
         const visibleSvs = svs.filter(function(d) {
-          const x1 = chromInfo.chrPositions["chr" + d.chromosome].pos + +d.start;
-          const x2 = chromInfo.chrPositions["chr" + d.chromosome].pos + +d.end;
+          const x1 = chromInfo.chrPositions[d.chromosome].pos + +d.start;
+          const x2 = chromInfo.chrPositions[d.chromosome].pos + +d.end;
 
           if (fromX < x1 && x2 < toX) {
             return true;
